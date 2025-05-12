@@ -1,26 +1,31 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.bg-wedding {
+  background-image: url("../components/template/v1/assets/img/background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-lato);
+}
+
+@theme {
+  --color-primary: #b67c3d;
+  --color-secondary: #2c3e50;
+  --font-pacifico: "Pacifico", cursive;
+  --font-lato: "Lato", sans-serif;
+  --font-bebas: "Bebas Neue", cursive;
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(1deg);
+    }
+    50% {
+      transform: rotate(-1deg);
+    }
+  }
 }

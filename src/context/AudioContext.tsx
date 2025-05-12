@@ -25,7 +25,11 @@ export const AudioProvider = ({ children }: { children: React.ReactNode }) => {
     const audio = audioRef.current;
     if (!audio) return;
 
-    playing ? audio.play() : audio.pause();
+    if(playing){
+      audio.play();
+    } else {
+      audio.pause();
+    }
 
     return () => {
       audio.pause();

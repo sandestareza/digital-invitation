@@ -10,7 +10,6 @@ import BtnTop from "@/components/BtnTop";
 
 export default function TempV1() {
 	
-
 	return (
 		<>
 			<Opening />
@@ -20,7 +19,7 @@ export default function TempV1() {
 			<DigitalGift />
 			<Clossing />
 			<ToogleAudio />
-			<BtnTop /> 
+			<BtnTop />
 		</>
 	);
 }

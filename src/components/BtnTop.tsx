@@ -5,6 +5,7 @@ import { FaArrowUp } from "react-icons/fa";
 import * as motion from "motion/react-client";
 
 function BtnTop() {
+	
 	return (
 		<div className="fixed right-4 lg:right-[30rem] bottom-20">
 			<motion.button

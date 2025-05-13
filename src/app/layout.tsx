@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Pacifico, Lato, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import { AudioProvider } from "@/context/AudioContext";
+import { Toaster } from 'react-hot-toast';
 
 const pacifico = Pacifico({
 	weight: ["400"],
@@ -37,6 +38,7 @@ export default function RootLayout({
 				className={`${pacifico.variable} ${lato.variable} ${bebas.variable} antialiased`}
 			>
 				<main className="flex min-h-screen flex-col max-w-[414px] mx-auto">
+					<Toaster />
 					<AudioProvider>{children}</AudioProvider>
 				</main>
 			</body>

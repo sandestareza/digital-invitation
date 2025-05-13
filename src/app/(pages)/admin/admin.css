@@ -1,39 +1,10 @@
 @import "tailwindcss";
-/* @import "tw-animate-css";
+@import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *)); */
+@custom-variant dark (&:is(.dark *));
 
-.bg-wedding {
-  background-image: url("../components/template/v1/assets/img/background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-}
 
-body {
-  font-family: var(--font-lato);
-}
-
-@theme {
-  --color-primary: #b67c3d;
-  --color-secondary: #2c3e50;
-  --font-pacifico: "Pacifico", cursive;
-  --font-lato: "Lato", sans-serif;
-  --font-bebas: "Bebas Neue", cursive;
-  --animate-wiggle: wiggle 1s ease-in-out infinite;
-  @keyframes wiggle {
-    0%,
-    100% {
-      transform: rotate(1deg);
-    }
-    50% {
-      transform: rotate(-1deg);
-    }
-  }
-}
-
-/* @theme inline {
+@theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -44,9 +15,7 @@ body {
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
@@ -79,9 +48,7 @@ body {
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
@@ -113,9 +80,7 @@ body {
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.205 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
@@ -147,4 +112,4 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-} */
+}

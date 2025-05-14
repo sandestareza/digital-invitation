@@ -7,12 +7,25 @@ import ilustration from "../assets/img/wedding.png";
 import flowerTop from "@/components/template/v1/assets/img/flowwer_1.png";
 import flowerBottom from "@/components/template/v1/assets/img/flowwer_2.png";
 import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAudioContext } from "@/context/AudioContext";
+import { useSearchParams } from 'next/navigation';
+import { toTitleCase } from "@/lib/utils";
 
 export default function Opening() {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
+	const [guestName, setGuestName] = useState('');
+
+	const searchParams = useSearchParams();
 	const { toggle } = useAudioContext();
+
+	useEffect(() => {
+    const nameFromURL = searchParams.get('to');
+    if (nameFromURL) {
+      setGuestName(toTitleCase(decodeURIComponent(nameFromURL)));
+    }
+  }, [searchParams]);
+
 	if (!isOpen) {
 		return (
 			<Container withDecoration>
@@ -59,7 +72,7 @@ export default function Opening() {
 							Kepada Yth. Bapak/Ibu/Saudara/i
 						</p>
 						<h2 className="text-lg font-semibold text-secondary mb-2 font-bebas tracking-[3px]">
-							Tamu Undangan
+							{guestName || "Tamu Undangan"}
 						</h2>
 						<p className="text-xs text-gray-400 mb-6">
 							Mohon maaf jika ada kesalahan penulisan nama dan

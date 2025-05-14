@@ -18,3 +18,11 @@ export function formatDate(date: string) {
   const formattedDate = new Date(date).toLocaleString("id-ID", options)
   return formattedDate.replace(/(\d{2})\/(\d{2})\/(\d{4})/, "$3-$2-$1")
 }
+
+export const toTitleCase = (str: string) =>
+  str
+    .toLowerCase()
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+

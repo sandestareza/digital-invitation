@@ -116,7 +116,7 @@ function FormGuest({ isOpen, onClose, selectedGuest }: Readonly<FormGuestProps>)
 							<Label htmlFor="whatsapp">No WhatsApp</Label>
 							<Input
 								id="whatsapp"
-								maxLength={13}
+								maxLength={14}
 								className="col-span-3 text-xs w-full"
 								required
 								placeholder="cth: 628123456789"

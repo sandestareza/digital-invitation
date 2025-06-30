@@ -37,7 +37,7 @@ export default function GuestBook() {
 			const { data } = await getRSVPs();
 			setRspvs(data || []);
 		} catch (error) {
-			console.error('Error fetching RSVPs:', error);			
+			console.error('Error fetching RSVPs:', error);
 		} finally {
 			setIsLoadinData(false);
 		}
@@ -87,7 +87,7 @@ export default function GuestBook() {
 	};
 
 	return (
-		<Container className="justify-baseline items-center py-16">
+		<Container id="wishes" className="justify-baseline items-center py-16 section-marker">
 			<div className="absolute top-0 left-0 w-full h-full pointer-events-none animate-wiggle">
 				<Image
 					src={flowerTop}
@@ -100,6 +100,7 @@ export default function GuestBook() {
 				<h1 className="text-xl text-center font-bold text-secondary font-pacifico">
 					Kirim Ucapan
 				</h1>
+        <p className="text-xs text-center font-light">Kirimkan doa dan ucapan terbaik untuk kami.</p>
 				<motion.div
 					whileHover={{ scale: 1.2, rotate: 10 }}
 					className="flex justify-center"

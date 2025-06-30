@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Pacifico, Lato, Bebas_Neue } from "next/font/google";
+import { Playball, Dosis, Bebas_Neue,  } from "next/font/google";
 import "./globals.css";
 import { AudioProvider } from "@/context/AudioContext";
 import { Toaster } from 'react-hot-toast';
 
-const pacifico = Pacifico({
+const pacifico = Playball({
 	weight: ["400"],
 	variable: "--font-pacifico",
 	subsets: ["latin"],
 });
 
-const lato = Lato({
-	weight: ["100", "300", "400", "700", "900"],
+const lato = Dosis({
+	weight: ["300", "400", "700"],
 	variable: "--font-lato",
 	subsets: ["latin"],
 });

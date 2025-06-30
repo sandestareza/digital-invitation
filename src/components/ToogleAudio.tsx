@@ -8,7 +8,7 @@ function ToogleAudio() {
 	const { toggle, playing } = useAudioContext();
 
 	return (
-		<div className="fixed right-4 lg:right-[30rem] bottom-10">
+		<div className="fixed right-4 lg:right-[30rem] bottom-28">
 			<button
 				onClick={toggle}
 				className={`flex justify-center items-center w-fit rounded-full bg-primary p-2 text-white z-50 ${

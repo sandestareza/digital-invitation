@@ -5,9 +5,9 @@ import { FaArrowUp } from "react-icons/fa";
 import * as motion from "motion/react-client";
 
 function BtnTop() {
-	
+
 	return (
-		<div className="fixed right-4 lg:right-[30rem] bottom-20">
+		<div className="fixed right-4 lg:right-[30rem] bottom-40">
 			<motion.button
         whileHover={{ scale: 1.2 }}
 				onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

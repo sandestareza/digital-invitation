@@ -35,7 +35,7 @@ export default function Opening() {
 						animate={{ y: 0 }}
 						exit={{ y: 0 }}
             transition={{ duration: 3, ease: "easeInOut" }}
-						className="p-6 flex flex-col justify-center items-center text-center fixed h-screen bg-wedding w-full z-10"
+						className="p-6 flex flex-col justify-center items-center text-center fixed h-screen bg-wedding w-full z-50"
 					>
 						<div className="absolute top-0 left-0 w-full h-full pointer-events-none">
 							<Image

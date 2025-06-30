@@ -8,7 +8,7 @@ import * as motion from "motion/react-client";
 
 export default function MainProfile() {
 	return (
-		<Container className="justify-baseline gap-0 min-h-screen py-12">
+		<Container id="couple" className="justify-baseline gap-0 min-h-screen py-12 section-marker">
 			<div className="absolute top-0 left-0 w-full h-full pointer-events-none animate-wiggle">
 				<Image
 					src={flowerTop}
@@ -62,7 +62,7 @@ export default function MainProfile() {
 				<motion.h1
 					initial={{ opacity: 0, y: 50 }}
 					whileInView={{ opacity: 1, y: 0 }}
-					className="text-lg font-bold text-primary font-pacifico"
+					className="text-2xl font-bold text-primary font-pacifico"
 				>
 					Sandesta Reza, S.Kom
 				</motion.h1>
@@ -88,7 +88,7 @@ export default function MainProfile() {
 				<motion.h1
 					initial={{ opacity: 0, y: 50 }}
 					whileInView={{ opacity: 1, y: 0 }}
-					className="text-lg font-bold text-primary font-pacifico"
+					className="text-2xl font-bold text-primary font-pacifico"
 				>
 					Tira Helvianis, S.Pd
 				</motion.h1>

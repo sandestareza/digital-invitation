@@ -6,14 +6,16 @@ import Image from "next/image";
 export default function Container({
 	children,
 	withDecoration = false,
-  className="justify-center items-center h-screen"
+  className="justify-center items-center h-screen",
+  id
 }: Readonly<{
 	children: React.ReactNode;
 	withDecoration?: boolean;
-  className?: string
+  className?: string;
+  id?:string
 }>) {
 	return (
-		<section className={`w-full bg-wedding overflow-hidden relative flex flex-col ${className}`}>
+		<section id={id} className={`w-full bg-wedding overflow-hidden relative flex flex-col ${className} section-marker`}>
 			<div className="absolute top-0 left-0 w-full h-full pointer-events-none">
 				{withDecoration ? (
 					<>

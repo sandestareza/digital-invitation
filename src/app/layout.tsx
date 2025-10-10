@@ -23,8 +23,8 @@ const bebas = Bebas_Neue({
 });
 
 export const metadata: Metadata = {
-	title: "Wedding Reza & Tira",
-	description: "The Wedding Of Reza & Tira",
+	title: "The Wedding of Reza & Tira",
+	description: "Invitation to the wedding of Reza & Tira",
 };
 
 export default function RootLayout({

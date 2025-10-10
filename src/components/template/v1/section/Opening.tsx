@@ -1,11 +1,7 @@
 "use client";
 
 import Container from "@/components/Container";
-import Image from "next/image";
 import { MdMail } from "react-icons/md";
-import ilustration from "../assets/img/wedding.png";
-import flowerTop from "@/components/template/v1/assets/img/flowwer_1.png";
-import flowerBottom from "@/components/template/v1/assets/img/flowwer_2.png";
 import { AnimatePresence, motion } from "motion/react";
 import { useState, useEffect } from "react";
 import { useAudioContext } from "@/context/AudioContext";
@@ -37,50 +33,28 @@ export default function Opening() {
             transition={{ duration: 3, ease: "easeInOut" }}
 						className="p-6 flex flex-col justify-center items-center text-center fixed h-screen bg-wedding w-full z-50"
 					>
-						<div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-							<Image
-								src={flowerTop}
-								alt="Top Decoration"
-								className="absolute top-0 left-0 w-52"
-								priority
-							/>
-							<Image
-								src={flowerBottom}
-								alt="Bottom Decoration"
-								className="absolute bottom-0 right-0 w-52"
-								priority
-							/>
-						</div>
-						<p className="text-sm text-gray-500">The Wedding Of</p>
+						<p className="text-sm text-cream mt-48">The Wedding Of</p>
 
-						<div className="my-4 flex justify-center">
-							<Image
-								src={ilustration}
-								alt="Couple Illustration"
-								className="w-48 h-48 object-contain"
-							/>
-						</div>
-
-						<h1 className="text-2xl font-bold text-primary mb-1 font-pacifico">
+						<h1 className="text-4xl lg:text-7xl font-bold text-cream mb-1 font-pacifico">
 							Reza & Tira
 						</h1>
-						<p className="text-sm text-gray-500 mb-4">
+						<p className="text-sm text-zinc-300 mb-4">
 							Minggu, 09 November 2025
 						</p>
 
-						<p className="text-sm text-gray-700">
+						<p className="text-sm text-zinc-300">
 							Kepada Yth. Bapak/Ibu/Saudara/i
 						</p>
 						<h2 className="text-lg font-semibold text-secondary mb-2 font-bebas tracking-[3px]">
 							{guestName || "Tamu Undangan"}
 						</h2>
-						<p className="text-xs text-gray-400 mb-6">
+						<p className="text-xs text-zinc-300 mb-6">
 							Mohon maaf jika ada kesalahan penulisan nama dan
 							gelar
 						</p>
 						<button
 							type="button"
-							className="bg-secondary text-white px-6 py-2 rounded-md font-semibold hover:bg-[#1a242f] flex items-center justify-center gap-2 z-50 cursor-pointer animate-bounce"
+							className="bg-secondary text-cream px-6 py-2 rounded-md font-semibold hover:bg-primary flex items-center justify-center gap-2 z-50 cursor-pointer animate-bounce"
 							onClick={() => {
 								setIsOpen(true)
 								toggle()

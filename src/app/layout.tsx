@@ -37,7 +37,7 @@ export default function RootLayout({
 			<body
 				className={`${pacifico.variable} ${lato.variable} ${bebas.variable} antialiased`}
 			>
-				<main className="flex min-h-screen flex-col max-w-[414px] mx-auto">
+				<main className="flex min-h-screen flex-col">
 					<Toaster />
 					<AudioProvider>{children}</AudioProvider>
 				</main>

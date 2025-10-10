@@ -8,20 +8,195 @@ html {
 }
 
 .bg-wedding {
-  background-image: url("../components/template/v1/assets/img/background.png");
+  background-image: url("../components/template/v1/assets/img/bg_opening.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
 }
 
+.bg-parallax {
+  /* The image used */
+  background-image: url("../components/template/v1/assets/img/bg_opening.jpg");
+
+  /* Set a specific height */
+  min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-parallax-1 {
+  /* The image used */
+  background-image: url("../components/template/v1/assets/img/bg_paralax_1.jpg");
+
+  /* Set a specific height */
+  min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-parallax-2 {
+  /* The image used */
+  background-image: url("../components/template/v1/assets/img/bg_paralax_2.jpg");
+
+  /* Set a specific height */
+  min-height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 body {
   font-family: var(--font-lato);
 }
 
+/* Definisi Keyframes untuk animasi pergerakan */
+@keyframes animate-heart {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px) scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Styling dasar untuk area animasi */
+.area {
+  z-index: -10;
+}
+
+/* Styling dasar untuk setiap hati (div container) */
+.love-container {
+  position: absolute;
+  display: block;
+
+  /* Ukuran dasar hati */
+  width: 50px;
+  height: 50px;
+  bottom: -150px; /* Mulai dari bawah layar */
+
+  /* Animasi */
+  animation: animate-heart 25s linear infinite;
+}
+
+/* Styling untuk SVG itu sendiri */
+.love-svg {
+  /* Warna fill putih semi-transparan */
+  color: rgba(255, 255, 255, 0.7);
+  /* Memberikan bayangan pink untuk efek glow */
+  filter: drop-shadow(0 0 8px rgba(105, 175, 255, 0.9));
+  width: 100%;
+  height: 100%;
+}
+
+/* Pengaturan unik untuk setiap hati */
+
+.love-container1 {
+  left: 10%;
+  animation-duration: 15s;
+  animation-delay: 0s;
+  opacity: 0.9;
+  width: 30px;
+  height: 30px;
+}
+
+.love-container2 {
+  left: 20%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 25s;
+  animation-delay: 1.5s;
+  opacity: 0.7;
+}
+
+.love-container3 {
+  left: 30%;
+  width: 60px;
+  height: 60px;
+  animation-duration: 35s;
+  animation-delay: 5s;
+  opacity: 0.5;
+}
+
+.love-container4 {
+  left: 40%;
+  animation-duration: 18s;
+  animation-delay: 0s;
+  opacity: 0.8;
+  width: 35px;
+  height: 35px;
+}
+
+.love-container5 {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-duration: 20s;
+  animation-delay: 0s;
+  opacity: 0.95;
+}
+
+.love-container6 {
+  left: 60%;
+  width: 45px;
+  height: 45px;
+  animation-duration: 30s;
+  animation-delay: 3.5s;
+  opacity: 0.6;
+}
+
+.love-container7 {
+  left: 70%;
+  animation-duration: 17s;
+  animation-delay: 7s;
+  opacity: 0.85;
+  width: 55px;
+  height: 55px;
+}
+
+.love-container8 {
+  left: 80%;
+  width: 50px;
+  height: 50px;
+  animation-duration: 22s;
+  animation-delay: 15s;
+  opacity: 0.4;
+}
+
+.love-container9 {
+  left: 90%;
+  width: 35px;
+  height: 35px;
+  animation-duration: 27s;
+  animation-delay: 2s;
+  opacity: 0.75;
+}
+
+.love-container10 {
+  left: 0%;
+  width: 65px;
+  height: 65px;
+  animation-duration: 40s;
+  animation-delay: 10s;
+  opacity: 0.3;
+}
+
 @theme {
-  --color-primary: #b67c3d;
-  --color-secondary: #2c3e50;
+  --color-primary: #a3daf3;
+  --color-secondary: #75b3d0;
+  --color-cream: #fdfefe;
   --font-pacifico: "Playball", cursive;
   --font-lato: "Dosis", sans-serif;
   --font-bebas: "Bebas Neue", cursive;

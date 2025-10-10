@@ -10,14 +10,14 @@ const BottomNav = ({ activeSection }: { activeSection: string }) => {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 h-20 bg-white/80 backdrop-blur-md shadow-[0_-5px_20px_-5px_rgba(0,0,0,0.1)] z-10 md:hidden">
+    <nav className="fixed bottom-0 left-0 right-0 h-20 bg-cream backdrop-blur-md shadow-[0_-5px_20px_-5px_rgba(0,0,0,0.1)] z-10 md:hidden">
       <div className="container mx-auto h-full flex justify-around items-center">
         {navItems.map((item) => (
           <a
             key={item.id}
             href={`#${item.id}`}
             className={`flex flex-col items-center justify-center gap-1 transition-colors duration-300 ${
-              activeSection === item.id ? "text-primary" : "text-gray-500"
+              activeSection === item.id ? "text-secondary" : "text-gray-500"
             }`}
           >
             <item.icon className="w-6 h-6" />

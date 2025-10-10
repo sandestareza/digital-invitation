@@ -2,7 +2,7 @@ import React from "react";
 
 function Clossing() {
 	return (
-		<section className="bg-secondary pt-8">
+		<section className="bg-secondary pt-8 pb-24 lg:pb-4">
 			<div className="mb-4">
 				<h1 className="text-xs text-center text-white">
 					Atas kehadiran kami ucapan

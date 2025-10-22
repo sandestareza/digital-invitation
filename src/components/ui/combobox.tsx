@@ -59,7 +59,7 @@ export function Combobox({
 					<ChevronsUpDown className="opacity-50" />
 				</Button>
 			</PopoverTrigger>
-			<PopoverContent className={cn("w-[200px] p-0", classNameItem)}>
+			<PopoverContent className={cn("w-[200px] p-0 text-cream bg-gray-900", classNameItem)}>
 				<Command>
 					<CommandInput
 						placeholder="Search item..."

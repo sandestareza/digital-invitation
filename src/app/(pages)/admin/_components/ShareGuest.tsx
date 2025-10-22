@@ -65,7 +65,7 @@ export function ShareGuest({ isOpen, onClose, selectedGuest }: Readonly<ShareGue
 
 	return (
 		<Dialog open={isOpen} onOpenChange={onClose}>
-			<DialogContent className="sm:max-w-md">
+			<DialogContent className="sm:max-w-md text-cream bg-gray-900">
 				<DialogHeader>
 					<DialogTitle>Bagikan ke WhatsApp</DialogTitle>
 					<DialogDescription>
@@ -80,7 +80,7 @@ export function ShareGuest({ isOpen, onClose, selectedGuest }: Readonly<ShareGue
 						<Input
 							id="link"
 							defaultValue={selectedGuest?.link}
-							className="w-full read-only:bg-slate-100 text-xs"
+							className="w-full read-only:bg-grsy-700 text-xs"
 							readOnly
 						/>
 					</div>
@@ -91,7 +91,7 @@ export function ShareGuest({ isOpen, onClose, selectedGuest }: Readonly<ShareGue
 						<Label htmlFor="messageStyle">Template Pesan:</Label>
 						<Combobox
 							options={options}
-							onChange={(value) => setMessageStyle(value as any)}
+							onChange={(value) => setMessageStyle(value as "formal" | "santai" | "keluarga")}
 							selected={messageStyle}
 						/>
 					</div>
@@ -99,18 +99,18 @@ export function ShareGuest({ isOpen, onClose, selectedGuest }: Readonly<ShareGue
 
 				{selectedGuest && (
 					<div
-						className="mt-2 p-2 border border-gray-200 rounded-md bg-white text-sm relative"
+						className="mt-2 p-2 border border-gray-200 rounded-md bg-gray-700 text-sm relative"
 					>
 						<h3 className="mb-1">📄 Preview Pesan WhatsApp</h3>
 						<p>
 							<strong>Untuk:</strong> {selectedGuest?.name}
 						</p>
 						<pre
-							className="mt-2 whitespace-pre-wrap break-all border border-gray-200 rounded-md bg-gray-100 text-xs p-2"
+							className="mt-2 whitespace-pre-wrap break-all border border-gray-200 rounded-md bg-gray-800 text-xs p-2"
 						>
 							{generateWhatsAppMessage(selectedGuest)}
 						</pre>		
-						<BtnCopy text={generateWhatsAppMessage(selectedGuest)} className="absolute top-2 right-2 bg-gray-100 hover:bg-gray-200 text-primary" />				
+						<BtnCopy text={generateWhatsAppMessage(selectedGuest)} className="absolute top-2 right-2" />				
 					</div>
 				)}
 
@@ -119,6 +119,7 @@ export function ShareGuest({ isOpen, onClose, selectedGuest }: Readonly<ShareGue
 						type="button"
 						className="cursor-pointer"
 						size={"sm"}
+            variant={"outline"}
 						onClick={handleShare}
 					>
 						Bagikan

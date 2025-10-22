@@ -30,6 +30,7 @@ const BtnCopy: React.FC<BtnCopyProps> = ({
       }}
 			type="button"
 			size="sm"
+      variant={"outline"}
 			className={clsx("p-3 m-0", className)} 
 		>
 			<span className="sr-only">

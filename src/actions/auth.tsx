@@ -23,7 +23,7 @@ export async function signIn(
     return { error: error.message };
   }
 
-  redirect("/admin/rsvps");
+  redirect("/admin/guestbooks");
 }
 
 export async function signOut() {

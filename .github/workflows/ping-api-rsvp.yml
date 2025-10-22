@@ -1,0 +1,17 @@
+name: Ping API RSVP Next.js API (Keep Supabase Alive)
+
+on:
+  schedule:
+    # Jalankan setiap 10 menit
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Next.js ping endpoint
+        run: |
+          curl -s -o /dev/null -w "%{http_code}\n" \
+            -H "x-api-key: ${{ secrets.KEEPALIVE_KEY }}" \
+            https://your-app.vercel.app/api/ping

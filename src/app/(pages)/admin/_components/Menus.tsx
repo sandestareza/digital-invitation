@@ -25,7 +25,7 @@ export const Menus = ({ user }: { user: TUser | null }) => {
 				<DropdownMenuTrigger className="p-2 border rounded-md cursor-pointer">
 					<House size={20} />
 				</DropdownMenuTrigger>
-				<DropdownMenuContent>
+				<DropdownMenuContent className="bg-gray-900 text-cream">
 					<DropdownMenuLabel>Hi, {user?.email ?? "User"}</DropdownMenuLabel>
 					<DropdownMenuSeparator />
 					<DropdownMenuItem>

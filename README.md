@@ -2,7 +2,7 @@
 
 A modern, elegant, and responsive digital wedding invitation built with ❤️ using [Next.js 15].
 
-🔗 Live demo: [https://digital-invitation-two.vercel.app](https://digital-invitation-two.vercel.app)
+🔗 Live demo: [https://reza-tira-wedding.vercel.app](https://reza-tira-wedding.vercel.app)
 
 ---
 

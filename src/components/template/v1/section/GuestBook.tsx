@@ -34,6 +34,8 @@ export default function GuestBook() {
     try {
       setIsLoadinData(true);
       const { data } = await getRSVPs();
+      console.log({data});
+      
       setRspvs(data || []);
     } catch (error) {
       console.error("Error fetching RSVPs:", error);
@@ -193,7 +195,7 @@ export default function GuestBook() {
                     <p className="text-sm font-extrabold text-secondary">
                       {rspv.name}
                     </p>
-                    <p className="text-xs italic font-pacifico text-primary">
+                    <p className="text-xs italic font-pacifico bg-secondary py-1 px-2 rounded w-fit text-cream">
                       {rspv.attendance}
                     </p>
                     <p className="text-xs font-light">

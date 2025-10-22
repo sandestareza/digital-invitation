@@ -80,6 +80,7 @@ export function GuestTable({ data }: Readonly<GuestTableProps>) {
 			<Button
 				className="mb-2 cursor-pointer"
 				size={"sm"}
+        variant={'outline'}
 				onClick={dialogCreate.openDialog}
 			>
 				<Plus /> Guest Book

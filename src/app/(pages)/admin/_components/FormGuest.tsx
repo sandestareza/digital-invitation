@@ -94,7 +94,7 @@ function FormGuest({ isOpen, onClose, selectedGuest }: Readonly<FormGuestProps>)
 				resetForm();
 			}}
 		>
-			<DialogContent>
+			<DialogContent className="text-cream bg-gray-900">
 				<DialogHeader>
 					<DialogTitle>{labelForm}</DialogTitle>
 				</DialogHeader>
@@ -140,7 +140,7 @@ function FormGuest({ isOpen, onClose, selectedGuest }: Readonly<FormGuestProps>)
 							<Input
 								type="text"
 								id="link"
-								className="col-span-3 read-only:bg-gray-100 text-xs w-full"
+								className="col-span-3 read-only:bg-gray-700 text-xs w-full"
 								readOnly
 								value={guestLink}
 							/>
@@ -151,6 +151,7 @@ function FormGuest({ isOpen, onClose, selectedGuest }: Readonly<FormGuestProps>)
 							type="submit"
 							className="cursor-pointer"
 							disabled={isLoading}
+              variant={"outline"}
 						>
 							{isLoading ? "Loading..." : labelSubmit}
 						</Button>

@@ -23,17 +23,17 @@ export const Actions = ({handleDelete, handleViewLink, handleShareLink, handleEd
 				<DropdownMenuTrigger className="p-2 border rounded-md cursor-pointer">
           <EllipsisVertical size={20}/>
 				</DropdownMenuTrigger>
-				<DropdownMenuContent>
-					<DropdownMenuItem onClick={handleEdit}>
+				<DropdownMenuContent className="bg-gray-900 text-cream">
+					<DropdownMenuItem onClick={handleEdit} className="cursor-pointer">
 						<Pencil /> Edit
 					</DropdownMenuItem>
-					<DropdownMenuItem onClick={handleDelete}>
+					<DropdownMenuItem onClick={handleDelete} className="text-red-400 cursor-pointer">
 						<Trash /> Hapus
 					</DropdownMenuItem>
-					<DropdownMenuItem onClick={handleViewLink}>
+					<DropdownMenuItem onClick={handleViewLink} className="cursor-pointer">
 						<Globe /> Lihat Undangan
 					</DropdownMenuItem>
-					<DropdownMenuItem onClick={handleShareLink}>
+					<DropdownMenuItem onClick={handleShareLink} className="text-green-400 cursor-pointer">
 					  <Share2 /> Bagikan ke Whatsapp
 					</DropdownMenuItem>
 				</DropdownMenuContent>

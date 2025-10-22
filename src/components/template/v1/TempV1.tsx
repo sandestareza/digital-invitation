@@ -12,7 +12,8 @@ import BtnTop from "@/components/BtnTop";
 import LoadingScreen from "./section/LoadingScreen";
 import BottomNav from "./section/BottomNav";
 import HomeSection from "./section/HomeSection";
-import GallerySection from "./section/Gallery";
+// import GallerySection from "./section/Gallery";
+import GalleryPhoto from "./section/GalleryPhoto";
 
 export default function TempV1() {
   const [loading, setLoading] = useState(true);
@@ -63,7 +64,7 @@ export default function TempV1() {
       <HomeSection />
       <MainProfile />
       <EventDetails />
-      <GallerySection />
+      <GalleryPhoto />
       <GuestBook />
       <DigitalGift />
       <Clossing />

@@ -77,6 +77,7 @@ export function GuestTable({ data }: Readonly<GuestTableProps>) {
 					className="max-w-sm"
 				/>
 			</div>
+
 			<Button
 				className="mb-2 cursor-pointer"
 				size={"sm"}
@@ -85,10 +86,12 @@ export function GuestTable({ data }: Readonly<GuestTableProps>) {
 			>
 				<Plus /> Guest Book
 			</Button>
+      <p className="mb-2">Total Guest : {filteredData.length}</p>
 			<div className="rounded-md border">
 				<Table>
 					<TableHeader>
 						<TableRow>
+							<TableHead>No.</TableHead>
 							<TableHead>Name</TableHead>
 							<TableHead>No. WhatsApp</TableHead>
 							<TableHead>Action</TableHead>
@@ -96,8 +99,11 @@ export function GuestTable({ data }: Readonly<GuestTableProps>) {
 					</TableHeader>
 					<TableBody>
 						{filteredData.length > 0 ? (
-							filteredData.map((guest) => (
+							filteredData.map((guest, index) => (
 								<TableRow key={guest.id}>
+									<TableCell className="w-10">
+										{index + 1}
+									</TableCell>
 									<TableCell className="whitespace-normal">
 										{guest.name}
 									</TableCell>

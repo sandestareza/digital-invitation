@@ -43,7 +43,12 @@ export function ShareGuest({ isOpen, onClose, selectedGuest }: Readonly<ShareGue
 	const handleShare = () => {
 		const message = generateWhatsAppMessage(selectedGuest!);
 		const phone = selectedGuest?.whatsapp ? `phone=${selectedGuest?.whatsapp}` : "";
-		const url = `https://api.whatsapp.com/send?${phone}&text=${encodeURIComponent(message)}`;
+		let url = ``;
+    if (selectedGuest?.whatsapp === '628') {
+      url = `https://api.whatsapp.com/send/?text=${encodeURIComponent(message)}`
+    } else {
+      url = `https://api.whatsapp.com/send?${phone}&text=${encodeURIComponent(message)}`
+    }
 		window.open(url, "_blank");
 	};
 
@@ -56,10 +61,9 @@ export function ShareGuest({ isOpen, onClose, selectedGuest }: Readonly<ShareGue
 			case "santai":
 				return `Hai ${name}! 🎉\nAku mau ngundang kamu ke acara pernikahan kami nih!\n\nCek undangannya di sini ya:\n${link}\n\nJangan lupa datang yaa!😊`;
 			case "keluarga":
-				return `Assalamu’alaikum, ${name}.\nKami sekeluarga mengundang ${name} sekeluarga untuk hadir dalam acara pernikahan kami.\n\nBerikut link undangannya:\n${link}\n\nSemoga bisa hadir ya. Terima kasih!`;
+				return `Assalamu’alaikum Warahmatullahi Wabarakatuh.\n\nKami sekeluarga mengundang *${name}* sekeluarga untuk hadir dalam acara pernikahan kami.\n\nBerikut link undangannya:\n${link}\n\nSemoga bisa hadir ya. Terima kasih!`;
 			case "formal":
-			default:
-				return `Assalamu’alaikum Wr. Wb.\n\nDengan hormat,\nKami mengundang Bapak/Ibu/Saudara/i *${name}* untuk hadir dalam acara pernikahan kami.\n\nBerikut link undangan digitalnya:\n${link}\n\nMerupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.\n\nTerima kasih.\nWassalamu’alaikum Wr. Wb.`;
+				return `Assalamu’alaikum Warahmatullahi Wabarakatuh.\n\nDengan hormat,\nKami mengundang Bapak/Ibu/Saudara/i *${name}* untuk hadir dalam acara pernikahan kami.\n\nBerikut link undangan digitalnya:\n${link}\n\nMerupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.\n\nTerima kasih.\nWassalamu’alaikum Warahmatullahi Wabarakatuh.\n\n_Hormat kami_,\n*Keluarga Kedua Mempelai*`;
 		}
 	};
 

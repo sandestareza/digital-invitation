@@ -134,6 +134,7 @@ function FormGuest({ isOpen, onClose, selectedGuest }: Readonly<FormGuestProps>)
 								value={guestPhone}
 								autoComplete="off"
 							/>
+              <span className="text-xs italic text-gray-500">*Untuk share group cukup isikan 628</span>
 						</div>
 						<div className="grid w-full items-center gap-1.5">
 							<Label htmlFor="link">Link</Label>

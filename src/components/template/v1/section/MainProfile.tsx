@@ -16,7 +16,7 @@ export default function MainProfile() {
 
   return (
     <Container id="couple" className="h-full">
-      <div className="bg-[url('../components/template/v1/assets/img/bg_main_profile.jpg')] w-full h-[55em] area">
+      <div className="bg-[url('../components/template/v1/assets/img/bg_main_profile.jpg')] bg-cover w-full h-[55em] area">
         <div className="circles relative w-full h-full overflow-hidden">
           <motion.div
             initial={{ opacity: 0, y: 50 }}

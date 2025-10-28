@@ -9,8 +9,9 @@ import toast from "react-hot-toast";
 import { useEffect, useState } from "react";
 import { submitRSPV } from "@/actions/submitRSPV";
 import { getRSVPs } from "@/actions/getRSPVs";
-import { formatDate } from "@/lib/utils";
+import { formatDate, toTitleCase } from "@/lib/utils";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useSearchParams } from "next/navigation";
 
 type TRSPVs = {
   id: number;
@@ -20,7 +21,10 @@ type TRSPVs = {
   created_at: string;
 };
 export default function GuestBook() {
-  const [name, setName] = useState("");
+  const searchParams = useSearchParams();
+      
+
+  const [name, setName] = useState("Tamu Undangan");
   const [attendance, setAttendance] = useState("hadir");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -48,6 +52,13 @@ export default function GuestBook() {
     getData();
   }, [isSuccess]);
 
+  useEffect(() => {
+      const nameFromURL = searchParams.get('to');
+      if (nameFromURL) {
+        setName(toTitleCase(decodeURIComponent(nameFromURL)));
+      }
+    }, [searchParams]);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!name) {
@@ -71,7 +82,6 @@ export default function GuestBook() {
       const result = await submitRSPV(formData);
       if (result.success) {
         toast.success(result.message);
-        setName("");
         setAttendance("hadir");
         setMessage("");
         setErrors({});
@@ -125,7 +135,8 @@ export default function GuestBook() {
                 className="mt-1 px-2 py-1 text-xs w-full rounded-md border-gray-300 shadow focus:outline-0 focus:border-primary focus:ring-1 focus:ring-primary"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                required
+                style={{background: 'rgb(211 215 220)'}}
+                readOnly
               />
               {errors.name && (
                 <p className="text-red-500 text-sm mt-1">{errors.name}</p>

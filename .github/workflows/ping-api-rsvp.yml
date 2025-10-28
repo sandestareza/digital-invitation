@@ -2,8 +2,8 @@ name: Ping RSVP Next.js API (Keep Supabase Alive)
 
 on:
   schedule:
-    # Jalankan setiap 1380 menit
-    - cron: "*/1380 * * * *"
+    # Jalankan setiap hari jam 23:00 UTC
+    - cron: "0 23 * * *"
   workflow_dispatch:
 
 jobs:

@@ -177,7 +177,8 @@ export default function GuestBook() {
                 rows={5}
                 className="mt-1 px-2 py-1 text-xs w-full rounded-md border-gray-300 shadow focus:outline-0 focus:border-primary focus:ring-1 focus:ring-primary"
                 value={message}
-                onChange={(e) => setMessage(e.target.value)}
+                onChange={(e) => setMessage(e.target.value)}    
+                style={{resize:'none'}}            
                 required
               />
               {errors.message && (

@@ -19,7 +19,7 @@ type TActions = {
 export const Actions = ({handleDelete, handleViewLink, handleShareLink, handleEdit} : TActions) => {
 	return (
 		<div className="flex items-center gap-2">
-			<DropdownMenu>
+			<DropdownMenu modal={false}>
 				<DropdownMenuTrigger className="p-2 border rounded-md cursor-pointer">
           <EllipsisVertical size={20}/>
 				</DropdownMenuTrigger>

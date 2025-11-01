@@ -213,7 +213,7 @@ export default function GuestBook() {
                     <p className="text-xs font-light">
                       {formatDate(rspv.created_at)}
                     </p>
-                    <p className="text-sm mt-2 leading-4">{rspv.message}</p>
+                    <p className="text-sm mt-4 leading-4">{rspv.message}</p>
                   </div>
                 ))
               ) : (
